@@ -36,7 +36,7 @@ export class PuzzleService{
        if(this.solve(solution).solved == 27) return solution;
     });
       else 
-      return blockArray; // TODO: When initial solve returns blockarray.solved == 0 -> Unsolvable in current state.
+      return blockArray; // TODO: When initial solve returns blockArray.solved == 0 -> Unsolvable in current state. Try next starting position permutation
   }
 }
 

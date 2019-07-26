@@ -1,5 +1,7 @@
 {
   "name": "SnakeSolver",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

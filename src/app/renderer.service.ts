@@ -2,6 +2,7 @@ import { Injectable,  OnInit } from '@angular/core';
 import { THREE } from 'three.js';
 import { OrbitControls } from 'three-orbit-controls';
 import { PuzzleService } from './puzzle/puzzle.service';
+
 const THREE = require('three');
 const OrbitControls = require('three-orbit-controls')(THREE);
 
