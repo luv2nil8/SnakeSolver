@@ -11,18 +11,18 @@ export class Angle extends Pieces {
         for (let i = -1; i < 1; i + 2) {
             for (let j = -1; j < 1; i + 2) {
                 switch (previous.vector) {
-                    case '-z'||'+z': {
+                    case '-z': case'+z': {
                         piece.place(previous.x + i, previous.y + j, previous.z);
                         newBlocksArray.push(blocks);
                         break;
                     }
-                    case '-y'||'+y': {
+                    case '-y': case'+y': {
                         piece.place(previous.x+i, previous.y, previous.z+j);
                         newBlocksArray.push(blocks);
 
                         break;
                     }
-                    case '-x'||'+x': {
+                    case '-x': case '+x': {
                         piece.place(previous.x , previous.y+i, previous.z+j);
                         newBlocksArray.push(blocks);
                         break;
@@ -30,7 +30,7 @@ export class Angle extends Pieces {
                 }
             }
         }
-        
+
         if (Math.abs(piece.x) > 1 || Math.abs(piece.y) > 1 || Math.abs(piece.z) > 1) return [];
 
         for (let j = 0; j < newBlocksArray.length; j++) {
